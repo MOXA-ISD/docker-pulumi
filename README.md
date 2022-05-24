@@ -2,25 +2,42 @@
 
 A docker image built on official pulumi image with awscli and kubectl installed.
 
-- Available from dockerhub as [thingsprocloud/pulumi](https://hub.docker.com/r/thingsprocloud/pulumi-aws-kubernetes/)
+- Available from Docker Hub as [thingsprocloud/pulumi](https://hub.docker.com/r/thingsprocloud/pulumi-awscli-kubectl/)
 
-- Source Code [Github](https://github.com/MOXA-ISD/docker-pulumi-aws-kubernetes)
+- Source [https://github.com/MOXA-ISD/docker-pulumi-awscli-kubectl](https://github.com/MOXA-ISD/docker-pulumi-awscli-kubectl)
+
+# Installed tools
+
+- awscli v2.7.15
+- bash v5.1.4
+- jq v1.6
+- kubectl v1.24.2
+- pulumi v3.36.0
+- yq v4.26.1
 
 ## Usage
 
-    docker run -it --rm thingsprocloud/pulumi bash
+    # Get image from Docker Hub
+    docker pull thingsprocloud/pulumi-awscli-kubectl
+
+    # Get image from AWS ECR
+    docker pull 233704588990.dkr.ecr.ap-northeast-1.amazonaws.com/moxa-cloud-platform-library/pulumi-awscli-kubectl
 
 ## Development
 
 ### Clone
 
 ```bash
-git clone git@github.com:MOXA-ISD/docker-pulumi-aws-kubernetes.git
+git clone git@github.com:MOXA-ISD/docker-pulumi-awscli-kubectl.git
 ```
 
-### Modify config
+### Prepare and modify config
 
-You can modify dockerhub repository in configs/dockerhub.env before build image
+```bash
+cp configs/example.env .env
+```
+
+You can modify configs in .env before build image
 
 ### Instruction
 
