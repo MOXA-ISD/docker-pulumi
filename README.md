@@ -12,7 +12,7 @@ A docker image built on official pulumi image with awscli and kubectl installed.
 - bash v5.1.4
 - jq v1.6
 - kubectl v1.24.2
-- pulumi v3.36.0
+- pulumi v3.38.0
 - yq v4.26.1
 
 ## Usage
