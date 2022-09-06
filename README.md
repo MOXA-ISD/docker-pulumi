@@ -8,11 +8,11 @@ A docker image built on official pulumi image with awscli and kubectl installed.
 
 # Installed tools
 
-- awscli v2.7.15
+- awscli v2.7.24
 - bash v5.1.4
 - jq v1.6
 - kubectl v1.24.2
-- pulumi v3.38.0
+- pulumi v3.39.1
 - yq v4.26.1
 
 ## Usage
