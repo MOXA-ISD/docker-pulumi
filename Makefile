@@ -12,6 +12,7 @@ b: build
 r: run
 p: push
 c: clean
+bp: build push
 
 help:
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -35,5 +36,5 @@ push-docker-repo:
 	@docker push $(ORGANIZATION)/$(REPOSITORY):$(TAG)
 
 push-priv-repo:
-	@docker tag $(ORGANIZATION)/$(REPOSITORY):latest $(AWS_ECR_HOST)/$(AWS_ECR_ORGANIZATION)/$(REPOSITORY):$(TAG)
-	@docker push $(AWS_ECR_HOST)/$(AWS_ECR_ORGANIZATION)/$(REPOSITORY):$(TAG)
+	@docker tag $(ORGANIZATION)/$(REPOSITORY):latest $(AWS_ECR_HOST)/$(AWS_ECR_ORGANIZATION)/toolchain:$(REPOSITORY)-$(TAG)
+	@docker push $(AWS_ECR_HOST)/$(AWS_ECR_ORGANIZATION)/toolchain:$(REPOSITORY)-$(TAG)
